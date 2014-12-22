@@ -1,2 +1,3 @@
 This is a boring test file.
 On tuomiopäivä!
+Added this on the loremipsum2 branch.
