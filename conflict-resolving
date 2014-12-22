@@ -1,0 +1,22 @@
+When git pull complains about conflicts:
+
+- ensure you don't have uncommitted changes:
+  $ git diff --cached
+  ... if they aren't your changes:
+  $ git reset HEAD
+  ... if they are your changes:
+  $ git commit -m "explanation of the changes"
+- ensure that you are where you want to be:
+  $ git checkout master (or whatever branch you were working on)
+- get the remote changes:
+  $ git pull (you can explicitly tell to git pull origin master)
+- git diff should give you the conflicts
+  $ git diff
+- edit them away by hand 
+  $ gedit some-file-that-conflicted)
+- Commit your resolution of the changes:
+  $ git commit -am "resolving conflict, <explanation>"
+- Try if the push is now clean
+  $ git push
+- If it isn't, retry pulling...  
+
